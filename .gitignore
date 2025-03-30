@@ -1,0 +1,17 @@
+# OS / Editor
+.DS_Store
+node_modules/
+.env
+*.log
+
+# Backend (в server/)
+server/node_modules/
+server/.env
+
+# Frontend build (якщо буде)
+client/dist/
+client/build/
+
+# IDE
+.vscode/
+.idea/
