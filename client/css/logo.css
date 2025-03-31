@@ -1,0 +1,30 @@
+.logo {
+  font-family: "Space Grotesk", sans-serif;
+  transition: all 0.3s ease;
+  color: var(--page-text-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 60px;
+  line-height: 1;
+
+  @media (max-width: 565px) {
+    font-size: 40px;
+  }
+
+  .logo__accent-letter {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background: var(--gradient);
+    background-clip: text;
+    font-size: 70px;
+    @media (max-width: 565px) {
+      font-size: 50px;
+    }
+  }
+
+  &:hover {
+    text-shadow: 0 4px 8px rgba(0, 196, 204, 0.8);
+    transform: scale(1.05);
+  }
+}
