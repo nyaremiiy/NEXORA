@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Dashboard
+    <p>Повернутись на головну <a href="./index.html">Клік</a></p>
+    <button id="sing-out">вийти</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./js/dashboard.js"></script>
+    <script>
+      document.querySelector('#sing-out').addEventListener('click', () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/index.html';
+      })
+    </script>
+  </body>
+</html>

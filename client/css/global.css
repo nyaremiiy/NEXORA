@@ -15,8 +15,19 @@
   --box-shadow: 0 4px 30px rgba(0, 2, 8, 0.15);
   --gradient: linear-gradient(90deg, #00c4cc 0%, #007a91 100%);
   --color-main: #0a0f2c;
+  --color-second: #00bbc9;
   --color-light: #ffffff;
   --color-silver: #f5f5f8;
+  --color-red: #e53935;
+  --color-err: #e53935;
+  --color-input-border: #cccccc;
+  --color-silver-text: #bbafaf;
+  --color-bg-modal-window: #fafafa;
+  --color-text-input: #1a1a1a;
+  --color-bg-input: #fff;
+  --color-border-input: #ddd;
+  --color-border-input-hover: #ccc;
+  --color-link: #1f6df6;
 }
 
 *,
@@ -48,4 +59,8 @@ img {
   @media (max-width: 480px) {
     padding: 0 10px;
   }
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }

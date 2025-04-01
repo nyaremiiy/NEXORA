@@ -15,7 +15,10 @@
           </div>
         </a>
         <div class="header__button">
-          <a href="#" class="btn-link btn-link--secondary btn--login">
+          <button
+            href="./dashboard.html"
+            class="btn-link btn-link--secondary btn--login js-btn-login"
+          >
             <span>увійти</span>
             <svg
               width="25"
@@ -42,7 +45,7 @@
                 </linearGradient>
               </defs>
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </header>
@@ -84,7 +87,9 @@
               </ul>
             </div>
             <div class="hero__buttons">
-              <a href="#" class="btn-link btn-link--primary">Зареєструватися</a>
+              <button href="#" class="btn-link btn-link--primary js-btn-reg">
+                Зареєструватися
+              </button>
               <a href="#whynexora" class="btn-link btn-link--secondary">
                 Демо без реєстрації
               </a>
@@ -249,13 +254,13 @@
             </div>
           </div>
           <div class="call-to-action">
-            <h2 class="call-to-action__title title-h2 ">
+            <h2 class="call-to-action__title title-h2">
               Спробуй <span class="text--logo">NEXORA</span> прямо зараз — і
               переконайся сам.
             </h2>
-            <a href="#" class="btn-link btn-link--primary"
-              >Почати безкоштовно</a
-            >
+            <button href="#" class="btn-link btn-link--primary js-btn-reg">
+              Почати безкоштовно
+            </button>
           </div>
         </div>
       </section>
@@ -360,6 +365,129 @@
         </div>
       </div>
     </footer>
+
+    <!-- Form Register -->
+    <div class="modal-f" id="modal-reg">
+      <div class="modal-f__wrapper">
+        <div class="modal-f__close">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z"
+            />
+          </svg>
+        </div>
+        <h2 class="modal-f__title">Реєстрація</h2>
+        <p class="modal-f__text">
+          Зареєструйтесь, щоб отримати всі функції
+          <span class="text--logo">NEXORA</span>
+        </p>
+        <form id="reg-form">
+          <label class="label">
+            <input
+              class="input"
+              type="text"
+              name="username"
+              placeholder="Ім'я"
+              placeholder=" Ваше ім'я"
+              required
+            />
+            <span class="input-err"></span>
+          </label>
+          <label class="label">
+            <input
+              class="input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              placeholder="nyar@gmail.com"
+              required
+            />
+            <span class="input-err"></span>
+          </label>
+          <label class="label">
+            <input
+              class="input"
+              type="password"
+              name="password"
+              placeholder="Password"
+              placeholder="1234"
+              required
+            />
+            <span class="input-err"></span>
+          </label>
+          <button class="button-modal btn-link btn-link--primary" type="submit">
+            Зареєструватися
+          </button>
+        </form>
+        <p class="form-hint">
+          Вже маєте акаунт?
+          <button class="js-btn-login">Увійти</button>
+        </p>
+      </div>
+    </div>
+
+    <!-- Form login -->
+    <div class="modal-f" id="modal-login">
+      <div class="modal-f__wrapper">
+        <div class="modal-f__close">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z"
+            />
+          </svg>
+        </div>
+        <h2 class="modal-f__title">Авторизація</h2>
+        <p class="modal-f__text">
+          Увійдіть, щоб почати користуватись
+          <span class="text--logo">NEXORA</span>
+        </p>
+        <form id="login-form">
+          <label class="label">
+            <input
+              class="input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              placeholder="nyar@gmail.com"
+              required
+            />
+            <span class="input-err"></span>
+          </label>
+          <label class="label">
+            <input
+              class="input"
+              type="password"
+              name="password"
+              placeholder="Password"
+              placeholder="1234"
+              required
+            />
+            <span class="input-err"></span>
+          </label>
+          <button class="button-modal btn-link btn-link--primary" type="submit">
+            Увійти
+          </button>
+        </form>
+        <p class="form-hint">
+          Ще не маєте акаунта?
+          <button class="js-btn-reg">Зареєструйтесь</button>
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
