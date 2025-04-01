@@ -1,49 +1,42 @@
-const btnLogin = document.querySelectorAll('.js-btn-login');
-const btnsReg = document.querySelectorAll('.js-btn-reg');
+import { MODAL_FORM_VISIBLE, NO_SCROLL } from '../constants/classNames.js';
+import {
+  INDEX_PAGE_BTNS_LOGIN,
+  INDEX_PAGE_BTNS_REGISTER,
+  MODAL_FOR_LOGIN_FORM,
+  MODAL_FOR_REGISTER_FORM,
+  BTNS_MODAL_CLOSE,
+} from '../constants/domElements.js';
 
-const modalLogin = document.querySelector('#modal-login');
-const modalReg = document.querySelector('#modal-reg');
-
-const btnClose = document.querySelectorAll('.modal-f__close');
-
-btnClose.forEach((btn) => {
+BTNS_MODAL_CLOSE.forEach((btn) => {
   btn.addEventListener('click', hideModal);
 });
 
-btnLogin.forEach((btn) => {
+INDEX_PAGE_BTNS_LOGIN.forEach((btn) => {
   btn.addEventListener('click', showModalLogin);
 });
 
-btnsReg.forEach((btn) => {
+INDEX_PAGE_BTNS_REGISTER.forEach((btn) => {
   btn.addEventListener('click', showModalReg);
 });
 
 function showModalLogin() {
-  if (modalReg.classList.contains('modal-f--active')) {
-    modalReg.classList.remove('modal-f--active');
-  }
-
-  modalLogin.classList.add('modal-f--active');
-  document.body.classList.add('no-scroll');
+  switchModal(MODAL_FOR_LOGIN_FORM, MODAL_FOR_REGISTER_FORM);
 }
 
 function showModalReg() {
-  if (modalLogin.classList.contains('modal-f--active')) {
-    modalLogin.classList.remove('modal-f--active');
-  }
-
-  modalReg.classList.add('modal-f--active');
-  document.body.classList.add('no-scroll');
+  switchModal(MODAL_FOR_REGISTER_FORM, MODAL_FOR_LOGIN_FORM);
 }
 
 function hideModal() {
-  if (modalLogin.classList.contains('modal-f--active')) {
-    modalLogin.classList.remove('modal-f--active');
-  }
+  [MODAL_FOR_LOGIN_FORM, MODAL_FOR_REGISTER_FORM].forEach((modal) =>
+    modal.classList.remove(MODAL_FORM_VISIBLE)
+  );
 
-  if (modalReg.classList.contains('modal-f--active')) {
-    modalReg.classList.remove('modal-f--active');
-  }
+  document.body.classList.remove(NO_SCROLL);
+}
 
-  document.body.classList.remove('no-scroll');
+function switchModal(show, hide) {
+  hide.classList.remove(MODAL_FORM_VISIBLE);
+  show.classList.add(MODAL_FORM_VISIBLE);
+  document.body.classList.add(NO_SCROLL);
 }
