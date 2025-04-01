@@ -15,8 +15,6 @@ const checkAuth = async () => {
   } catch (error) {
     console.log('Помилка', error);
   }
-
-  console.log(token);
 };
 
 // async function checkAuth() {
