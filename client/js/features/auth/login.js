@@ -1,12 +1,26 @@
 import { loginUser } from './authService.js';
+import {
+  LOGIN_FORM,
+  MESSAGE_ERROR_FOR_LOGIN_FORM,
+  INPUTS_LOGIN_FORM,
+} from '../../constants/domElements.js';
 
-const formLogin = document.querySelector('#login-form');
+import {
+  CLASS_INPUT_ERROR,
+  FORM_MESSAGE_ERROR_VISIBLE,
+} from '../../constants/classNames.js';
 
-formLogin.addEventListener('submit', async (e) => {
+LOGIN_FORM.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const email = formLogin.email.value;
-  const password = formLogin.password.value;
+  const email = LOGIN_FORM.email.value;
+  const password = LOGIN_FORM.password.value;
+
+  MESSAGE_ERROR_FOR_LOGIN_FORM.classList.remove(FORM_MESSAGE_ERROR_VISIBLE);
+
+  INPUTS_LOGIN_FORM.forEach((input) => {
+    input.classList.remove(CLASS_INPUT_ERROR);
+  });
 
   try {
     const data = await loginUser(email, password);
@@ -19,6 +33,10 @@ formLogin.addEventListener('submit', async (e) => {
       console.log(data);
     }
   } catch (err) {
-    console.error('Login error:', err);
+    MESSAGE_ERROR_FOR_LOGIN_FORM.classList.add(FORM_MESSAGE_ERROR_VISIBLE);
+
+    INPUTS_LOGIN_FORM.forEach((input) => {
+      input.classList.add(CLASS_INPUT_ERROR);
+    });
   }
 });

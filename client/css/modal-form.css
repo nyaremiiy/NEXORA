@@ -129,8 +129,7 @@
 
         .input-err {
           color: var(--color-err);
-          padding-left: 12px;
-          font-size: 10px;
+          border-color: var(--color-err);
         }
       }
 
@@ -142,7 +141,7 @@
       color: var(--color-silver-text);
       text-align: center;
       font-weight: 300;
-      margin-top: 32px;
+      margin-top: 24px;
       font-size: 14px;
     }
 

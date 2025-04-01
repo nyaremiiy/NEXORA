@@ -5,7 +5,8 @@ export async function loginUser(email, password) {
     const res = await API.post('/users/login', { email, password });
     return res.data;
   } catch (err) {
-    throw new Error(err.response?.data?.message || 'Login failed');
+    console.log(err);
+    throw new Error(err.response?.data?.message || 'Помилка авторизації.');
   }
 }
 
@@ -18,6 +19,7 @@ export async function registerUser(username, email, password) {
     });
     return res.data;
   } catch (err) {
-    throw new Error(err.response?.data?.message || 'Register failed');
+    console.log(err);
+    throw new Error(err.response?.data?.message || 'Помилка реєстрації.');
   }
 }

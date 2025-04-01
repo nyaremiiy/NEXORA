@@ -1,13 +1,19 @@
 import { registerUser } from './authService.js';
 
-const formReg = document.querySelector('#reg-form');
+import {
+  MESSAGE_ERROR_FOR_REGISTER_FORM,
+  REGISTER_FORM,
+} from '../../constants/domElements.js';
+import { FORM_MESSAGE_ERROR_VISIBLE } from '../../constants/classNames.js';
 
-formReg.addEventListener('submit', async (e) => {
+REGISTER_FORM.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const username = formReg.username.value;
-  const email = formReg.email.value;
-  const password = formReg.password.value;
+  const username = REGISTER_FORM.username.value;
+  const email = REGISTER_FORM.email.value;
+  const password = REGISTER_FORM.password.value;
+
+  MESSAGE_ERROR_FOR_REGISTER_FORM.classList.remove(FORM_MESSAGE_ERROR_VISIBLE);
 
   try {
     const data = await registerUser(username, email, password);
@@ -20,6 +26,6 @@ formReg.addEventListener('submit', async (e) => {
       console.log(data);
     }
   } catch (err) {
-    console.error('Register error:', err);
+    MESSAGE_ERROR_FOR_REGISTER_FORM.classList.add(FORM_MESSAGE_ERROR_VISIBLE);
   }
 });
