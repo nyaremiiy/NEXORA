@@ -6,8 +6,9 @@
 @import './burger.css';
 @import './menu.css';
 @import './mobile-menu.css';
-@import './btn-link.css';
+@import './button.css';
 @import './logo.css';
+@import './modal-form.css';
 @import './footer.css';
 
 :root {
@@ -31,6 +32,7 @@
   --color-border-input: #ddd;
   --color-border-input-hover: #ccc;
   --color-link: #1f6df6;
+  --gradient-hero-col: linear-gradient(-90deg, #f0f4ff 0%, #ffffff 100%);
 }
 
 *,

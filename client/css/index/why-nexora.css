@@ -62,7 +62,7 @@
     }
 
     .call-to-action {
-      margin-top: 60px;
+      margin: 60px auto 0;
       text-align: center;
 
       .call-to-action__title {
@@ -71,6 +71,10 @@
         background: var(--gradient);
         background-clip: text;
         margin-bottom: 32px;
+      }
+
+      button {
+        margin: 0 auto;
       }
     }
   }

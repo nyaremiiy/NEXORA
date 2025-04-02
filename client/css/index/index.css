@@ -1,5 +1,4 @@
-@import './global/global.css';
+@import '../global/global.css';
 @import './hero.css';
 @import 'mobile-web.css';
 @import 'why-nexora.css';
-@import './modal-form.css';

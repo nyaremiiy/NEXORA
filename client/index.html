@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEXORA</title>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/index/index.css" />
   </head>
   <body>
     <header class="header" id="header">
@@ -31,9 +31,7 @@
             </nav>
           </div>
           <div class="header__button">
-            <button
-              class="btn-link btn-link--secondary btn--login js-btn-login"
-            >
+            <button class="btn btn--secondary js-btn-login">
               <span>увійти</span>
               <svg
                 width="25"
@@ -44,21 +42,7 @@
               >
                 <path
                   d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5V6.5ZM24.7071 8.20711C25.0976 7.81658 25.0976 7.18342 24.7071 6.79289L18.3431 0.428932C17.9526 0.0384079 17.3195 0.0384079 16.9289 0.428932C16.5384 0.819456 16.5384 1.45262 16.9289 1.84315L22.5858 7.5L16.9289 13.1569C16.5384 13.5474 16.5384 14.1805 16.9289 14.5711C17.3195 14.9616 17.9526 14.9616 18.3431 14.5711L24.7071 8.20711ZM1 8.5H24V6.5H1V8.5Z"
-                  fill="url(#paint0_linear_54_62)"
                 />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_54_62"
-                    x1="1"
-                    y1="8"
-                    x2="24"
-                    y2="8"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#00C4CC" />
-                    <stop offset="1" stop-color="#007A91" />
-                  </linearGradient>
-                </defs>
               </svg>
             </button>
           </div>
@@ -74,139 +58,133 @@
     </header>
     <main>
       <section class="hero" id="hero">
-        <div class="hero__silver-box"></div>
-        <div class="hero__container container">
-          <div class="hero__left-col">
-            <h1 class="title-h1">Вивчай. Запам’ятовуй. Користуйся.</h1>
-            <div class="hero__images">
-              <img
-                src="./images/index/apple-macbook.webp"
-                class="macbook-img"
-                alt="Apple MacBook displaying the Nexora application interface"
-                loading="lazy"
-              />
-            </div>
-            <div class="hero__text-box">
-              <p class="text">
-                <span class="text--logo">NEXORA</span> — це розумний помічник
-                для ефективного вивчення слів, адаптований під тебе.
-              </p>
-
-              <p class="text">
-                Це додаток для вивчення слів, які ти сам додаєш. Створи свій
-                словник і вчи тільки те, що тобі справді потрібно.
-              </p>
-              <p class="text">
-                Завдяки персоналізованому підходу, Nexora підлаштовується під
-                твій ритм і стиль навчання, фокусуючись на тому, що справді
-                важливо.
-              </p>
-            </div>
-            <div class="hero__features">
-              <ul class="feature-list">
-                <li class="feature-item">✅ AI-підказки</li>
-                <li class="feature-item">🧠 Персональний словник</li>
-                <li class="feature-item">⏱ Мінімум часу — максимум користі</li>
-              </ul>
-            </div>
-            <div class="hero__buttons">
-              <button href="#" class="btn-link btn-link--primary js-btn-reg">
-                Зареєструватися
-              </button>
-              <a href="#whynexora" class="btn-link btn-link--secondary">
-                Демо без реєстрації
-              </a>
-            </div>
-          </div>
-          <div class="hero__right-col">
-            <div class="hero__images">
-              <img
-                src="./images/index/apple-macbook.webp"
-                class="macbook-img"
-                alt="Apple MacBook displaying the Nexora application interface"
-                loading="lazy"
-              />
-            </div>
-            <div class="stats">
-              <div class="stat">
-                <div class="stat__value">2,430</div>
-                <div class="stat__label">Слів вивчено</div>
+        <div class="container">
+          <div class="hero__container">
+            <div class="hero__left-col">
+              <div class="hero__title">
+                <h1 class="title-h1">Твій простір для мовного розвитку</h1>
               </div>
-              <div class="stat">
-                <div class="stat__value">128</div>
-                <div class="stat__label">Користувачів вже з нами</div>
+              <div class="hero__desc">
+                <p class="text">
+                  <span class="text--logo">NEXORA</span> допоможе зберігати,
+                  повторювати й закріплювати слова, які ти справді хочеш
+                  вивчити.
+                </p>
               </div>
-              <div class="stat">
-                <div class="stat__label">Рейтинг</div>
-                <div class="rating-stars">
-                  <svg
-                    viewBox="0 0 20 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
-                      fill="#FFC700"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 20 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
-                      fill="#FFC700"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 20 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
-                      fill="#FFC700"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 20 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
-                      fill="#FFC700"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 20 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 1.61804L11.7696 7.06434L11.8819 7.40983H12.2451H17.9717L13.3388 10.7758L13.0449 10.9894L13.1572 11.3348L14.9268 16.7812L10.2939 13.4152L10 13.2016L9.70611 13.4152L5.0732 16.7812L6.84282 11.3348L6.95507 10.9894L6.66118 10.7758L2.02828 7.40983H7.75486H8.11813L8.23039 7.06434L10 1.61804Z"
-                      fill="url(#paint0_linear_5_578)"
-                      stroke="#FFC700"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_5_578"
-                        x1="6.5"
-                        y1="12"
-                        x2="14"
-                        y2="12"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0.475015" stop-color="#FFC700" />
-                        <stop
-                          offset="0.483149"
-                          stop-color="#FFC700"
-                          stop-opacity="0"
-                        />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+              <div class="hero__images">
+                <img
+                  src="./images/index/apple-macbook.webp"
+                  class="macbook-img"
+                  alt="Apple MacBook displaying the Nexora application interface"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hero__features">
+                <ul class="feature-list">
+                  <li class="feature-item">✅ AI-підказки</li>
+                  <li class="feature-item">🧠 Персональний словник</li>
+                  <li class="feature-item">
+                    ⏱ Мінімум часу — максимум користі
+                  </li>
+                </ul>
+              </div>
+              <div class="hero__buttons">
+                <button href="#" class="btn btn--primary js-btn-reg">
+                  Зареєструватися
+                </button>
+                <button class="btn btn--link">Демо без реєстрації</button>
+              </div>
+            </div>
+            <div class="hero__right-col">
+              <div class="hero__images">
+                <img
+                  src="./images/index/apple-macbook.webp"
+                  class="macbook-img"
+                  alt="Apple MacBook displaying the Nexora application interface"
+                  loading="lazy"
+                />
+              </div>
+              <div class="stats">
+                <div class="stat">
+                  <div class="stat__value">2,430</div>
+                  <div class="stat__label">Слів вивчено</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__value">128</div>
+                  <div class="stat__label">Користувачів вже з нами</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__value">Рейтинг</div>
+                  <div class="rating-stars">
+                    <svg
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
+                        fill="#FFC700"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
+                        fill="#FFC700"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
+                        fill="#FFC700"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
+                        fill="#FFC700"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 1.61804L11.7696 7.06434L11.8819 7.40983H12.2451H17.9717L13.3388 10.7758L13.0449 10.9894L13.1572 11.3348L14.9268 16.7812L10.2939 13.4152L10 13.2016L9.70611 13.4152L5.0732 16.7812L6.84282 11.3348L6.95507 10.9894L6.66118 10.7758L2.02828 7.40983H7.75486H8.11813L8.23039 7.06434L10 1.61804Z"
+                        fill="url(#paint0_linear_5_578)"
+                        stroke="#FFC700"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_5_578"
+                          x1="6.5"
+                          y1="12"
+                          x2="14"
+                          y2="12"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0.475015" stop-color="#FFC700" />
+                          <stop
+                            offset="0.483149"
+                            stop-color="#FFC700"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -281,7 +259,7 @@
               Спробуй <span class="text--logo">NEXORA</span> прямо зараз — і
               переконайся сам.
             </h2>
-            <button href="#" class="btn-link btn-link--primary js-btn-reg">
+            <button href="#" class="btn btn--secondary js-btn-reg">
               Почати безкоштовно
             </button>
           </div>
@@ -442,10 +420,7 @@
             />
             <span class="input-err"></span>
           </label>
-          <button
-            id="btn-modal-reg"
-            class="button-modal btn-link btn-link--primary"
-          >
+          <button id="btn-modal-reg" class="button-modal btn btn--primary">
             Зареєструватися
           </button>
           <p class="form-message-error">Щось пішло не так!</p>
@@ -500,7 +475,7 @@
             <span class="input-err"></span>
           </label>
           <button
-            class="button-modal btn-link btn-link--primary"
+            class="button-modal btn btn--primary"
             id="btn-modal-login"
             type="submit"
           >
@@ -530,10 +505,19 @@
         </ul>
       </nav>
       <div class="mobile-menu__button">
-        <button
-          class="btn-link btn-link--primary btn--login js-btn-login"
-        >
-          Увійти
+        <button class="btn btn--secondary js-btn-login">
+          <span>увійти</span>
+          <svg
+            width="25"
+            height="15"
+            viewBox="0 0 25 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5V6.5ZM24.7071 8.20711C25.0976 7.81658 25.0976 7.18342 24.7071 6.79289L18.3431 0.428932C17.9526 0.0384079 17.3195 0.0384079 16.9289 0.428932C16.5384 0.819456 16.5384 1.45262 16.9289 1.84315L22.5858 7.5L16.9289 13.1569C16.5384 13.5474 16.5384 14.1805 16.9289 14.5711C17.3195 14.9616 17.9526 14.9616 18.3431 14.5711L24.7071 8.20711ZM1 8.5H24V6.5H1V8.5Z"
+            />
+          </svg>
         </button>
       </div>
       <ul class="conatcts">
