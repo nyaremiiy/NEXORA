@@ -29,6 +29,7 @@ export const loginUser = async (req, res) => {
 
     res.status(200).json({
       message: 'Авторизація успішна!',
+      success: true,
       token,
       user: {
         id: user.id,
@@ -57,13 +58,11 @@ export const registerUser = async (req, res) => {
 
     const hashPassword = await bcrypt.hash(password, 10);
 
-    const newUser = new User({
+    const newUser = await User.create({
       username,
       email,
       password: hashPassword,
     });
-
-    await newUser.save();
 
     const token = jwt.sign(
       {
