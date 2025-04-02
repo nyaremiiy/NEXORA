@@ -3,16 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Навчальний кабінет | NEXORA</title>
+    <link rel="stylesheet" href="./css/dashboard/dashboard.css" />
   </head>
   <body>
-    Dashboard
-    <p>Повернутись на головну <a href="./index.html">Клік</a></p>
-    <button id="sing-out">вийти</button>
+    <header class="header" id="header">
+      <div class="header__container container">
+        <a href="#" class="header__logo">
+          <div class="logo">
+            ne<span class="logo__accent-letter">x</span>ora
+          </div>
+        </a>
+        <!-- <div class="header__left-col">
+          <div class="header__greeting">
+            <div id="greeting" class="greeting">
+              Привіт, <span class="greeting__username"></span>
+            </div>
+          </div>
+          <div class="header__button">
+            <button
+              href="./dashboard.html"
+              class="btn-link btn-link--secondary btn--login js-btn-logout"
+            >
+              <span>вийти</span>
+              <svg
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5V6.5ZM24.7071 8.20711C25.0976 7.81658 25.0976 7.18342 24.7071 6.79289L18.3431 0.428932C17.9526 0.0384079 17.3195 0.0384079 16.9289 0.428932C16.5384 0.819456 16.5384 1.45262 16.9289 1.84315L22.5858 7.5L16.9289 13.1569C16.5384 13.5474 16.5384 14.1805 16.9289 14.5711C17.3195 14.9616 17.9526 14.9616 18.3431 14.5711L24.7071 8.20711ZM1 8.5H24V6.5H1V8.5Z"
+                  fill="url(#paint0_linear_54_62)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_54_62"
+                    x1="1"
+                    y1="8"
+                    x2="24"
+                    y2="8"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#00C4CC" />
+                    <stop offset="1" stop-color="#007A91" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div> -->
+        <div class="header__burger">
+          <div class="burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="dashboard">
+        <div class="dashboard__container container">
+          <h1 class="dashboard__title title-h2">Навчальний кабінет</h1>
+        </div>
+      </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./js/dashboard.js"></script>
     <script>
-      document.querySelector('#sing-out').addEventListener('click', () => {
+      document.querySelector('.js-btn-logout').addEventListener('click', () => {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
         window.location.href = '/index.html';

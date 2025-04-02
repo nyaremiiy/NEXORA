@@ -1,3 +1,5 @@
+export const BODY = document.body;
+
 export const LOGIN_FORM = document.querySelector('#login-form');
 export const REGISTER_FORM = document.querySelector('#reg-form');
 
@@ -23,3 +25,6 @@ export const HERO_SECTION = document.querySelector('#hero');
 export const HERO_SECTION_COL = HERO_SECTION.querySelectorAll(
   '.hero__left-col, .hero__right-col'
 );
+
+export const BURGER = document.querySelector('#burger');
+export const MOBILE_MENU = document.querySelector('#mobile-menu');

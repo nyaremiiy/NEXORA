@@ -1,4 +1,4 @@
-import { MODAL_FORM_VISIBLE, NO_SCROLL } from '../constants/classNames.js';
+import { CLASS_MODAL_FORM_VISIBLE, CLASS_NO_SCROLL } from '../constants/classNames.js';
 import {
   INDEX_PAGE_BTNS_LOGIN,
   INDEX_PAGE_BTNS_REGISTER,
@@ -29,14 +29,14 @@ function showModalReg() {
 
 function hideModal() {
   [MODAL_FOR_LOGIN_FORM, MODAL_FOR_REGISTER_FORM].forEach((modal) =>
-    modal.classList.remove(MODAL_FORM_VISIBLE)
+    modal.classList.remove(CLASS_MODAL_FORM_VISIBLE)
   );
 
-  document.body.classList.remove(NO_SCROLL);
+  document.body.classList.remove(CLASS_NO_SCROLL);
 }
 
 function switchModal(show, hide) {
-  hide.classList.remove(MODAL_FORM_VISIBLE);
-  show.classList.add(MODAL_FORM_VISIBLE);
-  document.body.classList.add(NO_SCROLL);
+  hide.classList.remove(CLASS_MODAL_FORM_VISIBLE);
+  show.classList.add(CLASS_MODAL_FORM_VISIBLE);
+  document.body.classList.add(CLASS_NO_SCROLL);
 }

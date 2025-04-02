@@ -4,7 +4,7 @@ import {
   MESSAGE_ERROR_FOR_REGISTER_FORM,
   REGISTER_FORM,
 } from '../../constants/domElements.js';
-import { FORM_MESSAGE_ERROR_VISIBLE } from '../../constants/classNames.js';
+import { CLASS_FORM_MESSAGE_ERROR_VISIBLE } from '../../constants/classNames.js';
 
 REGISTER_FORM.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -13,7 +13,9 @@ REGISTER_FORM.addEventListener('submit', async (e) => {
   const email = REGISTER_FORM.email.value;
   const password = REGISTER_FORM.password.value;
 
-  MESSAGE_ERROR_FOR_REGISTER_FORM.classList.remove(FORM_MESSAGE_ERROR_VISIBLE);
+  MESSAGE_ERROR_FOR_REGISTER_FORM.classList.remove(
+    CLASS_FORM_MESSAGE_ERROR_VISIBLE
+  );
 
   try {
     const data = await registerUser(username, email, password);
@@ -26,6 +28,8 @@ REGISTER_FORM.addEventListener('submit', async (e) => {
       console.log(data);
     }
   } catch (err) {
-    MESSAGE_ERROR_FOR_REGISTER_FORM.classList.add(FORM_MESSAGE_ERROR_VISIBLE);
+    MESSAGE_ERROR_FOR_REGISTER_FORM.classList.add(
+      CLASS_FORM_MESSAGE_ERROR_VISIBLE
+    );
   }
 });

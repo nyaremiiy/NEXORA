@@ -1,0 +1,14 @@
+.header {
+  position: static;
+
+  .header__left-col {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+    .greeting {
+      .greeting__username {
+        font-weight: 500;
+      }
+    }
+  }
+}

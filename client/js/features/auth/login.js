@@ -7,7 +7,7 @@ import {
 
 import {
   CLASS_INPUT_ERROR,
-  FORM_MESSAGE_ERROR_VISIBLE,
+  CLASS_FORM_MESSAGE_ERROR_VISIBLE,
 } from '../../constants/classNames.js';
 
 LOGIN_FORM.addEventListener('submit', async (e) => {
@@ -16,7 +16,9 @@ LOGIN_FORM.addEventListener('submit', async (e) => {
   const email = LOGIN_FORM.email.value;
   const password = LOGIN_FORM.password.value;
 
-  MESSAGE_ERROR_FOR_LOGIN_FORM.classList.remove(FORM_MESSAGE_ERROR_VISIBLE);
+  MESSAGE_ERROR_FOR_LOGIN_FORM.classList.remove(
+    CLASS_FORM_MESSAGE_ERROR_VISIBLE
+  );
 
   INPUTS_LOGIN_FORM.forEach((input) => {
     input.classList.remove(CLASS_INPUT_ERROR);
@@ -33,7 +35,9 @@ LOGIN_FORM.addEventListener('submit', async (e) => {
       console.log(data);
     }
   } catch (err) {
-    MESSAGE_ERROR_FOR_LOGIN_FORM.classList.add(FORM_MESSAGE_ERROR_VISIBLE);
+    MESSAGE_ERROR_FOR_LOGIN_FORM.classList.add(
+      CLASS_FORM_MESSAGE_ERROR_VISIBLE
+    );
 
     INPUTS_LOGIN_FORM.forEach((input) => {
       input.classList.add(CLASS_INPUT_ERROR);

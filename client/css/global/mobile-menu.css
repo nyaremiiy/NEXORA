@@ -1,0 +1,52 @@
+.mobile-menu {
+  background-color: #fff;
+  transition: all 0.3s ease;
+  padding: 50px 24px 24px;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  z-index: 150;
+  opacity: 0;
+  width: 0%;
+  right: -100%;
+
+  &.mobile-menu--active {
+    right: 0;
+    width: 100%;
+    opacity: 1;
+  }
+
+  .mobile-menu__button {
+    margin-top: 40px;
+  }
+
+  .conatcts {
+    flex-direction: column;
+    margin-top: 32px;
+    display: flex;
+    gap: 12px;
+    .contacts__item {
+      text-align: center;
+      .contacts__social-list {
+        justify-content: center;
+        margin-top: 32px;
+        display: flex;
+        gap: 12px;
+        .contacts__social-item {
+          .contacts__social-link {
+            display: flex;
+            svg {
+              width: 20px;
+              height: 20px;
+              path {
+                fill: var(--color-main);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

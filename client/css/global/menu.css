@@ -1,0 +1,23 @@
+.menu {
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 24px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+    .menu__item {
+      .menu__link {
+        font-weight: 500;
+        font-size: 18px;
+
+        @media (min-width: 768px) {
+          font-weight: 300;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
