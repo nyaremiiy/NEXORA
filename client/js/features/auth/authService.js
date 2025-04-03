@@ -23,3 +23,9 @@ export async function registerUser(username, email, password) {
     throw new Error(err.response?.data?.message || 'Помилка реєстрації.');
   }
 }
+
+export async function logout() {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  window.location.href = '/index.html';
+}

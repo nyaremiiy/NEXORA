@@ -1,11 +1,12 @@
-import { checkAuth } from './utils/checkAuth.js';
+import './ui/burgerController.js';
+import './ui/cards/createCardController.js'
+import './ui/logoutController.js'
 
-import { getUserName } from './utils/userInfo.js';
+import { checkAuth } from './utils/checkAuth.js';
+import { setMobileMenuSettings } from './utils/setMobileMenuTop.js';
+import { initRenderCards } from './ui/cards/renderCardsController.js';
 
 checkAuth('/dashboard');
+setMobileMenuSettings();
+initRenderCards();
 
-const greetingUserName = document
-  .querySelector('#greeting')
-  .querySelector('.greeting__username');
-
-greetingUserName.textContent = `${getUserName()}`;

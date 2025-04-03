@@ -1,0 +1,1 @@
+export const BTNS_MODAL_CLOSE = document.querySelectorAll('.modal-f__close');

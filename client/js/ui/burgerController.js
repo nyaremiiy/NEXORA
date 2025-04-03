@@ -5,7 +5,8 @@ import {
   CLASS_MOBILE_MENU_ACTIVE,
   CLASS_NO_SCROLL,
 } from '../constants/classNames.js';
-import { BODY, BURGER, MOBILE_MENU } from '../constants/domElements.js';
+import { BODY } from '../constants/dom/pageDomElements.js';
+import { BURGER, MOBILE_MENU } from '../constants/dom/burgerDomElements.js';
 
 const BURGER_ANIMATION_DURATION = 1000;
 

@@ -1,0 +1,1 @@
+export const HEADER = document.querySelector('#header');

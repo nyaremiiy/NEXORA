@@ -1,11 +1,17 @@
-import { CLASS_MODAL_FORM_VISIBLE, CLASS_NO_SCROLL } from '../constants/classNames.js';
+import {
+  CLASS_MODAL_FORM_VISIBLE,
+  CLASS_NO_SCROLL,
+} from '../constants/classNames.js';
+
+import { BTNS_MODAL_CLOSE } from '../constants/dom/modal/modalDomElements.js';
+import {
+  MODAL_FOR_LOGIN_FORM,
+  MODAL_FOR_REGISTER_FORM,
+} from '../constants/dom/modal/authModal/authModalDomElements.js';
 import {
   INDEX_PAGE_BTNS_LOGIN,
   INDEX_PAGE_BTNS_REGISTER,
-  MODAL_FOR_LOGIN_FORM,
-  MODAL_FOR_REGISTER_FORM,
-  BTNS_MODAL_CLOSE,
-} from '../constants/domElements.js';
+} from '../constants/dom/homePage/homePageDomElements.js';
 
 BTNS_MODAL_CLOSE.forEach((btn) => {
   btn.addEventListener('click', hideModal);

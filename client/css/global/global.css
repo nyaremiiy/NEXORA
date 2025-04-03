@@ -33,6 +33,9 @@
   --color-border-input-hover: #ccc;
   --color-link: #1f6df6;
   --gradient-hero-col: linear-gradient(-90deg, #f0f4ff 0%, #ffffff 100%);
+  --color-message-no-card: #6b7280;
+  --color-border-message-no-card: #cbd5e1;
+  --colo-bg-message-no-card: #f9fafb;
 }
 
 *,

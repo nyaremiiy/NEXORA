@@ -1,0 +1,28 @@
+.cards {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+
+  .cards__item {
+    &.cards__item--message {
+      border: 1px dashed var(--color-border-message-no-card);
+      background-color: var(--colo-bg-message-no-card);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      color: var(--color-message-no-card);
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 32px;
+      width: 100%;
+
+      &:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        transform: scale(1.015);
+        cursor: crosshair;
+      }
+    }
+  }
+}

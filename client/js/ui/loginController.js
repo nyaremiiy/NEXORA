@@ -1,14 +1,13 @@
-import { loginUser } from './authService.js';
+import { loginUser } from '../features/auth/authService.js';
 import {
   LOGIN_FORM,
   MESSAGE_ERROR_FOR_LOGIN_FORM,
   INPUTS_LOGIN_FORM,
-} from '../../constants/domElements.js';
-
+} from '../constants/dom/modal/authModal/authModalDomElements.js';
 import {
   CLASS_INPUT_ERROR,
   CLASS_FORM_MESSAGE_ERROR_VISIBLE,
-} from '../../constants/classNames.js';
+} from '../constants/classNames.js';
 
 LOGIN_FORM.addEventListener('submit', async (e) => {
   e.preventDefault();

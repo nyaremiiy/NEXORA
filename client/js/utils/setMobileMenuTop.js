@@ -1,4 +1,5 @@
-import { HEADER, MOBILE_MENU } from '../constants/domElements.js';
+import { HEADER } from '../constants/dom/headerDomElements.js';
+import { MOBILE_MENU } from '../constants/dom/burgerDomElements.js';
 
 export const setMobileMenuSettings = () => {
   const heightHeader = HEADER.offsetHeight;

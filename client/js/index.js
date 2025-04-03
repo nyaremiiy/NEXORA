@@ -1,5 +1,9 @@
-import './ui/modalController.js';
-import './features/auth/login.js';
-import './features/auth/register.js';
+import { setMobileMenuSettings } from './utils/setMobileMenuTop.js';
 
+import './ui/authController.js';
+import './ui/loginController.js';
+import './ui/registerController.js';
 
+import './ui/burgerController.js';
+
+setMobileMenuSettings();

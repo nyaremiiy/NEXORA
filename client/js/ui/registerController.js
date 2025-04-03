@@ -1,10 +1,9 @@
-import { registerUser } from './authService.js';
-
+import { registerUser } from '../features/auth/authService.js';
 import {
   MESSAGE_ERROR_FOR_REGISTER_FORM,
   REGISTER_FORM,
-} from '../../constants/domElements.js';
-import { CLASS_FORM_MESSAGE_ERROR_VISIBLE } from '../../constants/classNames.js';
+} from '../constants/dom/modal/authModal/authModalDomElements.js';
+import { CLASS_FORM_MESSAGE_ERROR_VISIBLE } from '../constants/classNames.js';
 
 REGISTER_FORM.addEventListener('submit', async (e) => {
   e.preventDefault();
