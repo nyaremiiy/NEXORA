@@ -1,14 +1,10 @@
 import Card from '../models/card.js';
-import jwt from 'jsonwebtoken';
 
-export const createCard = async (req, res) => {
+export async function createCard(req, res) {
   const { title } = req.body;
 
-  const token = req.headers.authorization.split(' ')[1];
-
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const userId = decoded.id;
+    const userId = req.user.id;
 
     const newCard = await Card.create({
       title,
@@ -23,4 +19,17 @@ export const createCard = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: 'Сталася помилка на сервері.' });
   }
-};
+}
+
+export async function getCards(req, res) {
+  try {
+    const userId = req.user.id;
+
+    const cards = await Card.find({ userId });
+
+    res.status(200).json(cards);
+  } catch (error) {
+    console.error('Error getting cards:', error);
+    res.status(500).json({ message: 'Не вдалося отримати картки.' });
+  }
+}
