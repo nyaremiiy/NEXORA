@@ -28,7 +28,7 @@ import connectDB from './services/db.js';
 // import { translate } from '@vitalets/google-translate-api';
 
 // async function run() {
-//   const res = await translate('', { from: 'en', to: 'uk' });
+//   const res = await translate('hello', { from: 'en', to: 'uk' });
 //   console.log('Переклад:', res.text);
 // }
 
@@ -36,6 +36,7 @@ import connectDB from './services/db.js';
 
 import userRoutes from './routes/users.js';
 import cardRoutes from './routes/cards.js';
+import wordRouter from './routes/words.js';
 
 import protectedRoutes from './routes/protectedRoutes.js';
 
@@ -53,6 +54,8 @@ app.use(express.json());
 app.use('/api', protectedRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/cards', cardRoutes);
+
+app.use('/api/words', wordRouter);
 
 app.listen(PORT, () => {
   console.log(`✅ Nexora server is running on http://localhost:${PORT}`);
