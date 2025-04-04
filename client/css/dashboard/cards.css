@@ -4,6 +4,15 @@
   display: flex;
   flex: 1;
 
+  &.cards--net {
+    gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 0.3fr));
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px 0px;
+  }
+
   .cards__item {
     &.cards__item--message {
       border: 1px dashed var(--color-border-message-no-card);

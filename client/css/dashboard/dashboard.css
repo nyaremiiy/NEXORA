@@ -1,6 +1,7 @@
 @import '../global/global.css';
 @import './header.css';
 @import './cards.css';
+@import './card.css';
 
 body {
   flex-direction: column;
@@ -21,6 +22,16 @@ body {
         flex: 1;
         display: flex;
         flex-direction: column;
+
+        .dashboard__panel {
+          grid-template-columns: repeat(2, 1fr);
+          align-items: center;
+          display: grid;
+
+          button {
+            justify-self: flex-end;
+          }
+        }
       }
     }
   }

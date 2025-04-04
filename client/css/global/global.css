@@ -36,6 +36,8 @@
   --color-message-no-card: #6b7280;
   --color-border-message-no-card: #cbd5e1;
   --colo-bg-message-no-card: #f9fafb;
+  --color-bg-card: #f9fafe;
+  --color-meta-card: #64748b;
 }
 
 *,

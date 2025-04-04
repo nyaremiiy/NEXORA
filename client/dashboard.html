@@ -59,8 +59,32 @@
     <main>
       <section class="dashboard">
         <div class="dashboard__container container">
-          <h1 class="dashboard__title title-h3">Навчальний кабінет</h1>
-          <ul class="cards" id="cards-container"></ul>
+          <div class="dashboard__panel">
+            <h1 class="dashboard__title title-h3">Навчальний кабінет</h1>
+            <button class="btn btn--primary js-btn-create-card">
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.99998 2.10001C8.4418 2.10001 8.79998 2.45818 8.79998 2.90001V7.70001H13.6C14.0418 7.70001 14.4 8.05818 14.4 8.50001C14.4 8.94183 14.0418 9.30001 13.6 9.30001H8.79998V14.1C8.79998 14.5418 8.4418 14.9 7.99998 14.9C7.55815 14.9 7.19998 14.5418 7.19998 14.1V9.30001H2.39998C1.95815 9.30001 1.59998 8.94183 1.59998 8.50001C1.59998 8.05818 1.95815 7.70001 2.39998 7.70001H7.19998V2.90001C7.19998 2.45818 7.55815 2.10001 7.99998 2.10001Z"
+                  fill="white"
+                />
+              </svg>
+              <span>Нова картка</span>
+            </button>
+          </div>
+          <ul class="cards" id="cards-container">
+            <li class="cards__item cards__item--message js-btn-create-card">
+              У вас ще немає карток. Створіть першу, щоб почати навчання!
+            </li>
+            <li></li>
+          </ul>
         </div>
       </section>
     </main>
@@ -326,6 +350,48 @@
             type="submit"
           >
             створити
+          </button>
+          <p class="form-message-error">Така назва уже існує у вас</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-f" id="modal-edit-card">
+      <div class="modal-f__wrapper">
+        <div class="modal-f__close">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z"
+            />
+          </svg>
+        </div>
+        <h2 class="modal-f__title">Редагувати картку</h2>
+        <p class="modal-f__text">
+          Дайте назву картці, яка вам зручна — наприклад: "Тварини", "Подорожі", або "IT терміни".
+        </p>
+        <form id="edit-card-form">
+          <label class="label">
+            <input
+              class="input"
+              type="text"
+              name="title"
+              placeholder="Слова для подорожей"
+              required
+            />
+            <span class="input-err"></span>
+          </label>
+          <button
+            class="button-modal btn btn--primary"
+            id="btn-modal-login"
+            type="submit"
+          >
+            Змінити
           </button>
           <p class="form-message-error">Така назва уже існує у вас</p>
         </form>
