@@ -14,10 +14,25 @@ export function initCardController() {
   const cards = document.querySelectorAll('.card');
 
   cards.forEach((card) => {
+    const cardTitle = card.querySelector('.card__title').textContent;
     const iconSettings = card.querySelector('.card__icon-settings');
     const cardSettings = card.querySelector('.card__settings');
     const btnRemove = card.querySelector('.card__remove');
     const btnEdit = card.querySelector('.card__edit');
+    const cardId = card.getAttribute('data-id');
+
+    card.addEventListener('click', (e) => {
+      if (
+        e.target.closest('.card__edit') ||
+        e.target.closest('.card__remove') ||
+        e.target.closest('.card__icon-settings') ||
+        e.target.closest('.card__settings')
+      ) {
+        return;
+      }
+      localStorage.setItem('currentCard', JSON.stringify({id: cardId, title: cardTitle}));
+      window.location.href = `/card.html`;
+    });
 
     iconSettings.addEventListener('click', () => {
       cardSettings.classList.toggle('card__settings--visible');
@@ -28,7 +43,7 @@ export function initCardController() {
     });
 
     btnRemove.addEventListener('click', async () => {
-      await deleteCard(card.getAttribute('data-id'));
+      await deleteCard(cardId);
       await initRenderCards();
       initCreateCardController();
       initCardController();

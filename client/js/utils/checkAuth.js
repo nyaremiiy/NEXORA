@@ -6,6 +6,11 @@ export const checkAuth = async (path) => {
     return;
   }
 
+  if(path === '/card' && !localStorage.getItem('currentCard')) {
+    window.location.href = '/dashboard.html';
+    return;
+  }
+
   try {
     await axios.get(path, {
       headers: {

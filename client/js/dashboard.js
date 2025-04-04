@@ -17,3 +17,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   initCreateCardController();
   initCardController();
 });
+
+localStorage.removeItem('currentCard');
