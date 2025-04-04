@@ -73,3 +73,20 @@ export async function updateCard(req, res) {
     res.status(500).json({ message: 'Помилка оновлення картки' });
   }
 }
+
+export async function getCard(req, res) {
+  try {
+    const { id } = req.params;
+
+    const card = await Card.findById(id).populate('words.wordId');
+
+    if (!card) {
+      return res.status(404).json({ message: 'Картку не знайдено' });
+    }
+
+    res.json(card);
+  } catch (error) {
+    console.error('Помилка отримання картки:', error.message);
+    res.status(500).json({ message: 'Помилка сервера' });
+  }
+}
