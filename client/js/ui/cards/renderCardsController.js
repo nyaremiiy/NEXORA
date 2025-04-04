@@ -1,16 +1,18 @@
 import { CARDS_CONTAINER } from '../../constants/dom/dashboard/dashboardDomElements.js';
 import { getCards } from '../../features/cards/cardsService.js';
-import { initCardController } from './cardController.js';
 
 export async function initRenderCards() {
   const cards = await getCards();
 
   if (cards.length !== 0) {
-    CARDS_CONTAINER.innerHTML = '';
-    let htmlCards = '';
-    cards.forEach((card) => {
-      htmlCards += `
-      <li class="cards__item">
+    CARDS_CONTAINER.innerHTML = ``;
+
+    const htmlCards = cards
+      .slice()
+      .reverse()
+      .map(
+        (card) => `
+    <li class="cards__item">
         <div class="card" data-id="${card._id}">
           <h3 class="card__title">${card.title}</h3>
           <p class="card__meta">${card.words.length} слів</p>
@@ -28,10 +30,18 @@ export async function initRenderCards() {
             </li>
           </ul>
         </div>
-      </li>`;
-    });
+      </li>
+    `
+      )
+      .join('');
+
     CARDS_CONTAINER.innerHTML = htmlCards;
     CARDS_CONTAINER.classList.add('cards--net');
-    initCardController();
+  } else {
+    CARDS_CONTAINER.innerHTML = `
+      <li class="cards__item cards__item--message js-btn-create-card">
+        У вас ще немає карток. Створіть першу, щоб почати навчання!
+      </li>`;
+    CARDS_CONTAINER.classList.remove('cards--net');
   }
 }

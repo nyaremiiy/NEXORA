@@ -5,24 +5,21 @@ import {
 } from '../../constants/dom/dashboard/dashboardDomElements.js';
 import { BTNS_MODAL_CLOSE } from '../../constants/dom/modal/modalDomElements.js';
 import { createCard } from '../../features/cards/cardsService.js';
-import { initRenderCards } from './renderCardsController.js'; //delete
+import { initCardController } from './cardController.js';
+import { initRenderCards } from './renderCardsController.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+export function initCreateCardController() {
   document.querySelectorAll('.js-btn-create-card').forEach((item) => {
     item.addEventListener('click', () => {
       MODAL_CREATE_CARD.classList.add(CLASS_MODAL_FORM_VISIBLE);
     });
   });
-});
 
-BTNS_MODAL_CLOSE.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    hideModal();
+  BTNS_MODAL_CLOSE.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      MODAL_CREATE_CARD.classList.remove(CLASS_MODAL_FORM_VISIBLE);
+    });
   });
-});
-
-function hideModal() {
-  MODAL_CREATE_CARD.classList.remove(CLASS_MODAL_FORM_VISIBLE);
 }
 
 FORM_CREATE_CARD.addEventListener('submit', async (e) => {
@@ -33,10 +30,12 @@ FORM_CREATE_CARD.addEventListener('submit', async (e) => {
 
   try {
     await createCard(title);
-    initRenderCards();
+    await initRenderCards();
+    initCardController();
   } catch (error) {
     console.log(error);
   }
+
   FORM_CREATE_CARD.reset();
-  hideModal();
+  MODAL_CREATE_CARD.classList.remove(CLASS_MODAL_FORM_VISIBLE);
 });
