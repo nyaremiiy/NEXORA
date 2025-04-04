@@ -43,3 +43,15 @@ export async function editCard(id, title) {
     );
   }
 }
+
+export async function getCard(id) {
+  try {
+    const res = await API.get(`/cards/${id}`);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+    throw new Error(
+      error.response?.data?.message || 'Помилка отримання картки.'
+    );
+  }
+}
