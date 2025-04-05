@@ -9,7 +9,8 @@ const WordScema = new mongoose.Schema(
     },
     transcription: {
       type: String,
-      required: true,
+      required: false,
+      default: '—'
     },
     ua: {
       type: String,

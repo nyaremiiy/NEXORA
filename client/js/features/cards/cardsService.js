@@ -55,3 +55,15 @@ export async function getCard(id) {
     );
   }
 }
+
+export async function  removeWordFromCard(cardId, wordId) {
+  try {
+    const res = await API.delete(`/cards/${cardId}/words/${wordId}`);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+    throw new Error(
+      error.response?.data?.message || 'Помилка отримання картки.'
+    );
+  }
+}

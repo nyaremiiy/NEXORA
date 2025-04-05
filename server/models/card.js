@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const WordInCardSchema = new mongoose.Schema({
   wordId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Word',
+    ref: 'UserWord',
     required: true,
   },
   status: {

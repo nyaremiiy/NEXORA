@@ -1,6 +1,8 @@
-export async function addWord(cardId, word, wordTranslate) {
+import { API } from '../../api/api.js';
+
+export async function addWord(cardId, word, wordTranslate = '') {
   try {
-    const res = await API.get(`/words/add`, { cardId, word, wordTranslate });
+    const res = await API.post(`/words/add`, { cardId, word, wordTranslate });
     return res.data;
   } catch (error) {
     console.error(error);
