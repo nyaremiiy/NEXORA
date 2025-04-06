@@ -392,20 +392,41 @@
             <input
               class="input"
               type="text"
-              name="word"
-              placeholder="Hello"
+              name="en"
               required
+              disabled
+            />
+          </label>
+          <label class="label">
+            <input
+              class="input"
+              type="text"
+              name="transcription"
+            />
+          </label>
+          <label class="label">
+            <input
+              class="input"
+              type="text"
+              name="ua"
             />
             <span class="input-err"></span>
+          </label>
+          <label class="label label--checkbox">
+            <input
+              class="input"
+              type="checkbox"
+              name="progress"
+            />
+            <span> Скинути прогрес? </span>
           </label>
           <button
             class="button-modal btn btn--primary"
             id="btn-modal-login"
             type="submit"
           >
-            Додати
+            Редагувати
           </button>
-          <p class="form-message-error">Така слово уже існує у вас</p>
         </form>
       </div>
     </div>

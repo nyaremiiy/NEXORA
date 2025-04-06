@@ -4,6 +4,8 @@ import { checkAuth } from './utils/checkAuth.js';
 
 import './ui/logoutController.js';
 import './ui/words/createWordController.js';
+import './ui/words/wordController.js'
+
 import { initWordController } from './ui/words/wordController.js';
 
 checkAuth('/card');

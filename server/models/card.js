@@ -5,11 +5,7 @@ const WordInCardSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'UserWord',
     required: true,
-  },
-  status: {
-    type: Number,
-    default: 0,
-  },
+  }
 });
 
 const CardSchema = new mongoose.Schema(

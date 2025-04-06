@@ -23,9 +23,9 @@ const UserWordSchema = new mongoose.Schema(
       default: '—',
       trim: true,
     },
-    status: {
+    progress: {
       type: Number,
-      default: 0, // від 0 до 100, рівень вивчення
+      default: 0,
     },
   },
   {

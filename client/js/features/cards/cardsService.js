@@ -56,7 +56,7 @@ export async function getCard(id) {
   }
 }
 
-export async function  removeWordFromCard(cardId, wordId) {
+export async function removeWordFromCard(cardId, wordId) {
   try {
     const res = await API.delete(`/cards/${cardId}/words/${wordId}`);
     return res.data;
@@ -64,6 +64,23 @@ export async function  removeWordFromCard(cardId, wordId) {
     console.error(error);
     throw new Error(
       error.response?.data?.message || 'Помилка отримання картки.'
+    );
+  }
+}
+
+export async function updateUserWord(en, transcription, ua, progress) {
+  try {
+    const res = await API.patch(`/cards/edit-word`, {
+      en,
+      transcription,
+      ua,
+      progress,
+    });
+    return res.data;
+  } catch (error) {
+    console.error(error);
+    throw new Error(
+      error.response?.data?.message || 'Помилка оновлення слова.'
     );
   }
 }

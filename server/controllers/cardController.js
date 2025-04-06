@@ -49,7 +49,7 @@ export async function deleteCard(req, res) {
       return res.status(404).json({ message: 'Картка не знайдена' });
     }
 
-    const remainingCards = await Card.find({ userId});
+    const remainingCards = await Card.find({ userId });
 
     if (remainingCards.length === 0) {
       await UserWord.deleteMany({ userId });
@@ -65,7 +65,6 @@ export async function deleteCard(req, res) {
         await UserWord.deleteOne({ _id: wordObj.wordId, userId });
       }
     }
-
 
     res.status(200).json({ message: 'Картку успішно видалено' });
   } catch (error) {
@@ -143,6 +142,28 @@ export async function removeWordFromCard(req, res) {
     res.json({ message: 'Слово видалено з картки' });
   } catch (err) {
     console.error(err.message);
+    res.status(500).json({ message: 'Помилка сервера' });
+  }
+}
+
+export async function updateUserWord(req, res) {
+  const { en, transcription, ua, progress } = req.body;
+  const userId = req.user.id;
+
+  try {
+    const updatedWord = await UserWord.findOneAndUpdate(
+      { userId, en: en.toLowerCase() },
+      { $set: { transcription, ua, progress } },
+      { new: true }
+    );
+
+    if (!updatedWord) {
+      return res.status(404).json({ message: 'Слово не знайдено' });
+    }
+
+    res.status(200).json({ message: 'Слово оновлено успішно' });
+  } catch (error) {
+    console.error('Помилка при оновленні слова:', error.message);
     res.status(500).json({ message: 'Помилка сервера' });
   }
 }
