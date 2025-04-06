@@ -28,13 +28,13 @@ FORM_CREATE_WORD.addEventListener('submit', async (e) => {
   const word = FORM_CREATE_WORD.word.value;
   if (!word.trim()) return;
 
-  const translate = FORM_CREATE_WORD.translate.value;
+  const wordTranslate = FORM_CREATE_WORD.translate.value;
 
   const cardId = JSON.parse(localStorage.getItem('currentCard')).id;
 
   MODAL_CREATE_WORD.classList.remove(CLASS_MODAL_FORM_VISIBLE);
   try {
-    await addWord(cardId, word, translate.trim());
+    await addWord(cardId, word, wordTranslate.trim());
     await initRenderWords();
     initWordController();
   } catch (error) {
@@ -42,6 +42,7 @@ FORM_CREATE_WORD.addEventListener('submit', async (e) => {
   }
 
   FORM_CREATE_WORD.reset();
+  labelTranslate.classList.remove('label--translate-visible');
 });
 // винести в константи
 
