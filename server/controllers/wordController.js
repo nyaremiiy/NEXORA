@@ -26,8 +26,13 @@ export async function addWord(req, res) {
         phonetics[0]?.text ??
         '—';
 
-      const translation = await translate(en, { from: 'en', to: 'uk' });
-      ua = translation.text;
+      // const translation = await translate(en, { from: 'en', to: 'uk' });
+      // ua = translation.text;
+
+      let phrase = `What is a ${en}`;
+      const rsp = await translate(phrase, { from: 'en', to: 'uk' });
+      phrase = rsp.text.trim().split(/\s+/);
+      ua = phrase[phrase.length - 1];
 
       globalWord = await Word.create({ en, transcription, ua });
     } else {

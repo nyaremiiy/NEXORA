@@ -32,6 +32,10 @@ body {
             justify-self: flex-end;
           }
         }
+
+        .dashboard__bottom-bar {
+          text-align: right;
+        }
       }
     }
   }
