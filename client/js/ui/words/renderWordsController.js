@@ -7,7 +7,7 @@ export async function initRenderWords() {
   );
   const words = card.words;
 
-  console.log(words);
+  localStorage.setItem('words', JSON.stringify(words));
 
   if (words.length !== 0) {
     WORDS_CONTAINER.innerHTML = '';

@@ -66,3 +66,25 @@
 .btn--link:hover::after {
   opacity: 0;
 }
+
+.btn--start {
+  /* padding: 14px 28px; */
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #00c896; /* свіжий мʼятний */
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 200, 150, 0.25);
+  letter-spacing: 0.5px;
+}
+
+.btn--start:hover {
+  background-color: #00b087;
+}
+
+.btn--start:active {
+  transform: scale(0.96);
+}
