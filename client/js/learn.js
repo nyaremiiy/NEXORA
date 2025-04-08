@@ -9,5 +9,5 @@ console.log(JSON.parse(localStorage.getItem('words')));
 document.title =
   JSON.parse(localStorage.getItem('currentCard')).title + ' | NEXORA';
 
-initRenderWordList();
+await initRenderWordList();
 checkTask();

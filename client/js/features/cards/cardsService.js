@@ -84,3 +84,13 @@ export async function updateUserWord(en, transcription, ua, progress) {
     );
   }
 }
+
+export async function updateUserWords(words) {
+  try {
+    const res = await API.patch(`/cards/update-progress`, { words });
+    return res.data;
+  } catch (error) {
+    console.error(error);
+    throw new Error(error.response?.data?.message || 'Помилка оновлення слів.');
+  }
+}

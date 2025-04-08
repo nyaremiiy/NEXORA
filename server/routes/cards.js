@@ -7,11 +7,14 @@ import {
   getCard,
   removeWordFromCard,
   updateUserWord,
+  updateUserWords
 } from '../controllers/cardController.js';
 import { verifyToken } from '../middleware/verifyToken.js';
 
 const router = new express.Router();
 
+
+router.patch('/update-progress', verifyToken, updateUserWords);
 router.post('/create', verifyToken, createCard);
 router.get('/', verifyToken, getCards);
 router.patch('/edit-word', verifyToken, updateUserWord);

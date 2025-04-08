@@ -167,3 +167,30 @@ export async function updateUserWord(req, res) {
     res.status(500).json({ message: 'Помилка сервера' });
   }
 }
+
+
+export async function updateUserWords(req, res) {
+  const userId = req.user.id;
+  const { words: updatedWords } = req.body;
+
+  if (!Array.isArray(updatedWords)) {
+    return res.status(400).json({ message: 'Невірний формат: очікується масив' });
+  }
+
+  try {
+    await Promise.all(
+      updatedWords.map(async ({ wordId, progress }) => {
+        await UserWord.findOneAndUpdate(
+          { _id: wordId, userId }, // шукаємо слово користувача
+          { $set: { progress: Math.min(Math.max(progress, 0), 100) } },
+          { new: true }
+        );
+      })
+    );
+
+    res.status(200).json({ message: 'Прогрес слів оновлено' });
+  } catch (err) {
+    console.error('Помилка при оновленні слів:', err);
+    res.status(500).json({ message: 'Не вдалося оновити прогрес слів' });
+  }
+}

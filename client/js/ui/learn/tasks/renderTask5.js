@@ -1,4 +1,6 @@
 import { TASK_CONTAINER } from '../../../constants/dom/learn/learn.js';
+import { updateUserWords } from '../../../features/cards/cardsService.js';
+import { initRenderWordList } from '../renderWordsListController.js';
 
 export async function renderTask5() {
   const globalWords = JSON.parse(localStorage.getItem('words')) || [];
@@ -13,7 +15,7 @@ export async function renderTask5() {
   renderCurrentWord(globalWords);
 }
 
-function renderCurrentWord(globalWords) {
+async function renderCurrentWord(globalWords) {
   const words = JSON.parse(sessionStorage.getItem('sessionWords'));
   const currentIndex = +sessionStorage.getItem('currentIndex');
 
@@ -24,6 +26,15 @@ function renderCurrentWord(globalWords) {
         <button class="btn btn--start js-start-task-again">Розпочати ще раз</button>
       </div>
     `;
+
+    const wordsToUpdate = globalWords.map((w) => ({
+      wordId: w.wordId._id,
+      progress: w.wordId.progress,
+    }));
+
+    await updateUserWords(wordsToUpdate);
+
+    initRenderWordList();
 
     document
       .querySelector('.js-start-task-again')
@@ -64,13 +75,19 @@ function renderCurrentWord(globalWords) {
       feedback.textContent = '✔ Правильно!';
       feedback.style.color = 'green';
       if (wordInGlobal) {
-        wordInGlobal.wordId.progress = Math.min(wordInGlobal.wordId.progress + 10, 100);
+        wordInGlobal.wordId.progress = Math.min(
+          wordInGlobal.wordId.progress + 10,
+          100
+        );
       }
     } else {
       feedback.textContent = `✖ Неправильно. Правильна відповідь: ${correct}`;
       feedback.style.color = 'crimson';
       if (wordInGlobal) {
-        wordInGlobal.wordId.progress = Math.max(wordInGlobal.wordId.progress - 10, 0);
+        wordInGlobal.wordId.progress = Math.max(
+          wordInGlobal.wordId.progress - 10,
+          0
+        );
       }
     }
 

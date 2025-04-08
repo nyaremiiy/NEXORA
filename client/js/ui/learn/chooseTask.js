@@ -1,5 +1,6 @@
 import { TASK_CONTAINER } from '../../constants/dom/learn/learn.js';
 import { renderTask1 } from './tasks/renderTask1.js';
+import { renderTask4 } from './tasks/renderTask4.js';
 import { renderTask5 } from './tasks/renderTask5.js';
 
 export function chooseTask(title, desc, dataId) {
@@ -19,6 +20,9 @@ export function chooseTask(title, desc, dataId) {
 
   btnStart.addEventListener('click', () => {
     switch (+btnStart.getAttribute('data-id')) {
+      case 4:
+        renderTask4();
+        break;
       case 5:
         renderTask5();
         break;
