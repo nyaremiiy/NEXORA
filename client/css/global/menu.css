@@ -3,15 +3,35 @@
     flex-direction: column;
     align-items: center;
     display: flex;
-    gap: 24px;
+    gap: 40px;
 
     @media (min-width: 768px) {
       flex-direction: row;
     }
     .menu__item {
       .menu__link {
+        position: relative;
         font-weight: 500;
         font-size: 18px;
+
+        &::before {
+          background: var(--color-accent);
+          transition: all 0.3s ease;
+          position: absolute;
+          border-radius: 4px;
+          display: block;
+          bottom: -6px;
+          content: '';
+          height: 2px;
+          width: 0%;
+          left: 0;
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
 
         @media (min-width: 768px) {
           font-weight: 300;

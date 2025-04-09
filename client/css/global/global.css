@@ -38,12 +38,22 @@
   --colo-bg-message-no-card: #f9fafb;
   --color-bg-card: #f9fafe;
   --color-meta-card: #64748b;
+
+  --color-accent: #00bbc9;
+  --color-main-footer: #0f172a;
+  --color-white-text: #ffffff;
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

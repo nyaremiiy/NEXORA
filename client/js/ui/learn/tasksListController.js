@@ -1,8 +1,6 @@
 import { TASKS } from '../../constants/dom/learn/learn.js';
 import { chooseTask } from './chooseTask.js';
 import { renderTask1 } from './tasks/renderTask1.js';
-import { renderTask2 } from './tasks/renderTask2.js';
-import { renderTask3 } from './tasks/renderTask3.js';
 
 TASKS.forEach((item) => {
   item.addEventListener('click', () => {
@@ -22,7 +20,7 @@ export function checkTask(data = 1) {
     case 2:
       chooseTask(
         'Вибір правильного перекладу',
-        'Вам буде показано англійське або українське слово та кілька варіантів перекладу. Оберіть правильний варіант перекладу. Відповідь перевіряється одразу, а прогрес слова оновлюється автоматично.',
+        'Вам буде показано англійське слово та кілька варіантів перекладу. Оберіть правильний варіант перекладу. Відповідь перевіряється одразу, а прогрес слова оновлюється автоматично після завершення усіх завдань.',
         2
       );
       break;

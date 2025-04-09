@@ -1,57 +1,87 @@
 .footer {
-  background-color: var(--color-main);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  color: var(--color-white);
 
-  .footer__container {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @media (max-width: 768px) {
+  .footer__top-bar {
+    background-color: var(--color-main-footer);
+    padding: 60px 0 30px;
+
+    @media (min-width: 768px) {
+      padding: 60px 0;
+    }
+
+    .footer__container {
       flex-direction: column;
-      gap: 32px;
-    }
-    .footer__logo {
-      .logo {
-        color: var(--color-light);
-      }
-    }
-    .footer__copy {
-      color: var(--color-light);
-      align-self: flex-end;
-      @media (max-width: 768px) {
-        align-self: center;
-        order: 3;
-      }
-    }
-    .footer__contacts {
-      color: var(--color-light);
+      text-align: center;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+      gap: 32px;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+
+      @media (min-width: 560px) {
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      .footer__content {
+        .footer__contacts{
+          flex-direction: column;
+          display: flex;
+          gap: 12px;
+        }
+        .footer__list {
+          flex-direction: column;
+          font-weight: 300;
+          font-size: 14px;
+          display: flex;
+          gap: 4px;
+        }
+      }
+    }
+  }
+  .footer__bottom-bar {
+    background-color: var(--color-main-footer);
+    padding: 20px 0;
+
+    @media (min-width: 768px) {
+      background-color: var(--color-black);
+    }
+
+    .footer__container {
+      flex-direction: column-reverse;
+      text-align: center;
+      display: flex;
+      gap: 30px;
+
+      @media (min-width: 768px) {
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      .footer__copy {
+        font-size: 12px;
+      }
+
       .footer__social-list {
-        margin-top: 20px;
-        display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 16px;
+        display: flex;
+        gap: 24px;
+
         .footer__social-list-item {
           .footer__social-list__link {
-            display: flex;
             svg {
-              display: flex;
-              width: 16px;
-              height: 16px;
+              height: 20px;
+              width: 20px;
+
               path {
-                fill: var(--color-light);
+                fill: var(--color-white);
               }
             }
           }
         }
       }
     }
-
   }
 }

@@ -54,3 +54,12 @@
 .text--logo {
   font-weight: 600;
 }
+
+.title-h5 {
+  font-size: 14px;
+  color: inherit;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}

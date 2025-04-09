@@ -19,4 +19,9 @@
   &:hover {
     text-shadow: 0 4px 8px rgba(0, 196, 204, 0.8);
   }
+
+  &.logo--light {
+    color: var(--color-light)
+  }
 }
+

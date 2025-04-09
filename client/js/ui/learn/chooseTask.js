@@ -1,5 +1,7 @@
 import { TASK_CONTAINER } from '../../constants/dom/learn/learn.js';
 import { renderTask1 } from './tasks/renderTask1.js';
+import { renderTask2 } from './tasks/renderTask2.js';
+import { renderTask3 } from './tasks/renderTask3.js';
 import { renderTask4 } from './tasks/renderTask4.js';
 import { renderTask5 } from './tasks/renderTask5.js';
 
@@ -20,6 +22,12 @@ export function chooseTask(title, desc, dataId) {
 
   btnStart.addEventListener('click', () => {
     switch (+btnStart.getAttribute('data-id')) {
+      case 2:
+        renderTask2();
+        break;
+      case 3:
+        renderTask3();
+        break;
       case 4:
         renderTask4();
         break;

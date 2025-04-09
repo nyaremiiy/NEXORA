@@ -182,3 +182,60 @@
     }
   }
 }
+
+/* переписати */
+
+.task__choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.task__choice {
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f8f9ff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.task__choice:hover:not(:disabled) {
+  background-color: #e2e6ff;
+}
+
+.task__choice:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.task__letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.task__letter {
+  padding: 10px 16px;
+  font-size: 18px;
+  background: #f1f3ff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.task__letter:disabled {
+  background: #ddd;
+  cursor: default;
+}
+
+.task__answer {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
