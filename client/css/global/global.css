@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import './typography.css';
 @import './header.css';
+@import './avatar.css';
 @import './burger.css';
 @import './menu.css';
 @import './mobile-menu.css';
@@ -17,7 +18,7 @@
   --page-text-color: #0a0f2c;
   --color-title: #0a0f2c;
   --box-shadow: 0 4px 30px rgba(0, 2, 8, 0.15);
-  --gradient: linear-gradient(90deg, #00c4cc 0%, #007a91 100%);
+  --gradient: linear-gradient(90deg, #00C853 0%, #007a91 100%);
   --color-main: #0a0f2c;
   --color-second: #00bbc9;
   --color-light: #ffffff;

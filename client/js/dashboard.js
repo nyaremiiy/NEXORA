@@ -2,6 +2,7 @@ import './ui/burgerController.js';
 import './ui/logoutController.js';
 import './ui/cards/createCardController.js';
 import './ui/cards/cardController.js';
+import './ui/avatarController.js';
 
 import { checkAuth } from './utils/checkAuth.js';
 import { setMobileMenuSettings } from './utils/setMobileMenuTop.js';
@@ -20,3 +21,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 localStorage.removeItem('currentCard');
 localStorage.removeItem('words');
+
+
+
