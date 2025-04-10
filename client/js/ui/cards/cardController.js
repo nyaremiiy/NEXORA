@@ -5,6 +5,7 @@ import {
 } from '../../constants/dom/dashboard/dashboardDomElements.js';
 import { BTNS_MODAL_CLOSE } from '../../constants/dom/modal/modalDomElements.js';
 import { deleteCard, editCard } from '../../features/cards/cardsService.js';
+import { wordCountController } from '../wordsCountController.js';
 import { initCreateCardController } from './createCardController.js';
 import { initRenderCards } from './renderCardsController.js';
 
@@ -47,6 +48,7 @@ export function initCardController() {
       await initRenderCards();
       initCreateCardController();
       initCardController();
+      wordCountController();
     });
 
     btnEdit.addEventListener('click', async () => {

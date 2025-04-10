@@ -82,7 +82,7 @@ export async function getUserWords(req, res) {
   try {
     const userWords = await UserWord.find({ userId });
 
-    res.status(200).json({ message: 'success', words: userWords });
+    return res.status(200).json({ message: 'success', words: userWords });
   } catch (error) {
     console.error('Помилка:', error.message);
     return res.status(500).json({ message: 'Не вдалося отримати слова.' });

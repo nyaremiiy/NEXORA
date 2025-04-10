@@ -1,4 +1,3 @@
-import './ui/wordsCountController.js'
 import './ui/burgerController.js';
 import './ui/logoutController.js';
 import './ui/cards/createCardController.js';
@@ -10,6 +9,7 @@ import { setMobileMenuSettings } from './utils/setMobileMenuTop.js';
 import { initRenderCards } from './ui/cards/renderCardsController.js';
 import { initCreateCardController } from './ui/cards/createCardController.js';
 import { initCardController } from './ui/cards/cardController.js';
+import { wordCountController } from './ui/wordsCountController.js';
 
 checkAuth('/dashboard');
 setMobileMenuSettings();
@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 localStorage.removeItem('currentCard');
 localStorage.removeItem('words');
+
+wordCountController();
 
 
 

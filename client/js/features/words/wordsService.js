@@ -15,6 +15,7 @@ export async function addWord(cardId, word, wordTranslate = '') {
 export async function getUserWords() {
   try {
     const res = await API.get(`/words/`);
+    console.log(res);
     return res.data;
   } catch (error) {
     console.error(error);
