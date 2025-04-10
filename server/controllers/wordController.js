@@ -26,9 +26,6 @@ export async function addWord(req, res) {
         phonetics[0]?.text ??
         '—';
 
-      // const translation = await translate(en, { from: 'en', to: 'uk' });
-      // ua = translation.text;
-
       let phrase = `What is a ${en}`;
       const rsp = await translate(phrase, { from: 'en', to: 'uk' });
       phrase = rsp.text.trim().split(/\s+/);
@@ -75,6 +72,19 @@ export async function addWord(req, res) {
     res.status(201).json({ message: 'Слово додано', word: userWord });
   } catch (error) {
     console.error('Помилка:', error.message);
-    return res.status(500).json({ message: 'Не вдалося додати слово' });
+    return res.status(500).json({ message: 'Не вдалося додати слово.' });
+  }
+}
+
+export async function getUserWords(req, res) {
+  const userId = req.user.id;
+
+  try {
+    const userWords = await UserWord.find({ userId });
+
+    res.status(200).json({ message: 'success', words: userWords });
+  } catch (error) {
+    console.error('Помилка:', error.message);
+    return res.status(500).json({ message: 'Не вдалося отримати слова.' });
   }
 }
