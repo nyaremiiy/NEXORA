@@ -1,3 +1,4 @@
+import './ui/wordsCountController.js'
 import './ui/burgerController.js';
 import './ui/logoutController.js';
 import './ui/cards/createCardController.js';

@@ -11,3 +11,15 @@ export async function addWord(cardId, word, wordTranslate = '') {
     );
   }
 }
+
+export async function getUserWords() {
+  try {
+    const res = await API.get(`/words/`);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+    throw new Error(
+      error.response?.data?.message || 'Не вдалося отримати слова.'
+    );
+  }
+}
