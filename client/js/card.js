@@ -5,8 +5,10 @@ import { checkAuth } from './utils/checkAuth.js';
 import './ui/logoutController.js';
 import './ui/words/createWordController.js';
 import './ui/words/wordController.js'
+import './ui/avatarController.js';
 
 import { initWordController } from './ui/words/wordController.js';
+import { wordCountController } from './ui/wordsCountController.js';
 
 checkAuth('/card');
 console.log(JSON.parse(localStorage.getItem('currentCard')));
@@ -18,3 +20,5 @@ await initRenderWords();
 
 initCreateWordController();
 initWordController();
+
+wordCountController();

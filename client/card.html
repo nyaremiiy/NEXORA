@@ -15,36 +15,140 @@
           </div>
         </a>
         <div class="header__content">
-          <div class="header__menu">
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Головна</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Про Nexora</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Мій кабінет</a>
-                </li>
-              </ul>
-            </nav>
+          <div class="words-count">
+            <span>Слів:</span>
+            <div class="words-count__learned"></div>
+            <span>/</span>
+            <div class="words-count__all"></div>
           </div>
-          <div class="header__button">
-            <button class="btn btn--secondary js-btn-logout">
-              <span>вийти</span>
+          <div class="avatar">
+            <div class="avatar__arrow">
               <svg
-                width="25"
-                height="15"
-                viewBox="0 0 25 15"
+                viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5V6.5ZM24.7071 8.20711C25.0976 7.81658 25.0976 7.18342 24.7071 6.79289L18.3431 0.428932C17.9526 0.0384079 17.3195 0.0384079 16.9289 0.428932C16.5384 0.819456 16.5384 1.45262 16.9289 1.84315L22.5858 7.5L16.9289 13.1569C16.5384 13.5474 16.5384 14.1805 16.9289 14.5711C17.3195 14.9616 17.9526 14.9616 18.3431 14.5711L24.7071 8.20711ZM1 8.5H24V6.5H1V8.5Z"
+                  d="M6 10L12 16L18 10"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
-            </button>
+            </div>
+            <div class="avatar__user">N</div>
+            <div class="avatar__settings">
+              <ul class="avatar__list">
+                <li class="avatar__item">
+                  <div class="avatar__level">
+                    <span>Рівень 1</span>
+                  </div>
+                </li>
+                <li class="avatar__item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 20C4 17 8 17 10 15C11 14 8 14 8 9C8 5.667 9.333 4 12 4C14.667 4 16 5.667 16 9C16 14 13 14 14 15C16 17 20 17 20 20"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Мій профіль</span>
+                </li>
+                <li class="avatar__item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 4C9 2.89543 9.89543 2 11 2C12.1046 2 13 2.89543 13 4V6H18V11H20C21.1046 11 22 11.8954 22 13C22 14.1046 21.1046 15 20 15H18V20H13V18C13 16.8954 12.1046 16 11 16C9.89543 16 9 16.8954 9 18V20H4V15H6C7.10457 15 8 14.1046 8 13C8 11.8954 7.10457 11 6 11H4V6H9V4Z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <a href="./dashboard.html">Навчальний кабінет</a>
+                </li>
+                <li class="avatar__item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.03504 12.705C5.01185 12.4732 4.99998 12.238 4.99998 12C4.99998 11.762 5.01185 11.5268 5.03504 11.295L3.20575 9.23205L5.20575 5.76795L7.90695 6.32071C8.28727 6.04613 8.69627 5.80882 9.1286 5.61412L9.99998 3H14L14.8714 5.61412C15.3037 5.80882 15.7127 6.04613 16.093 6.32071L18.7942 5.76795L20.7942 9.23205L18.9649 11.295C18.9881 11.5268 19 11.762 19 12C19 12.238 18.9881 12.4732 18.9649 12.705L20.7942 14.7679L18.7942 18.232L16.093 17.6793C15.7127 17.9539 15.3037 18.1912 14.8714 18.3859L14 21H9.99998L9.1286 18.3859C8.69627 18.1912 8.28727 17.9539 7.90695 17.6793L5.20575 18.232L3.20575 14.7679L5.03504 12.705Z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Налаштування</span>
+                </li>
+                <li class="avatar__item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 3V21"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20 3V21H6C4.89543 21 4 20.1046 4 19V5C4 3.89543 4.89543 3 6 3H20Z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 17C8 15 11.3333 15.3334 12.6667 14C13.3333 13.3334 11.3333 13.3334 11.3333 10C11.3333 7.77802 12.222 6.66669 14 6.66669C15.778 6.66669 16.6667 7.77802 16.6667 10C16.6667 13.3334 14.6667 13.3334 15.3333 14C16.6667 15.3334 20 15 20 17"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Контакти</span>
+                </li>
+                <li class="avatar__item js-btn-logout">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 4L4 8L8 12"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4 8H14.5C17.5376 8 20 10.4624 20 13.5C20 16.5376 17.5376 19 14.5 19H5"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Вийти</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="header__burger">
@@ -56,6 +160,7 @@
         </div>
       </div>
     </header>
+
 
     <main>
       <section class="card">
