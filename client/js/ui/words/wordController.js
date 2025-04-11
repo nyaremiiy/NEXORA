@@ -8,6 +8,7 @@ import {
   removeWordFromCard,
   updateUserWord,
 } from '../../features/cards/cardsService.js';
+import { wordCountController } from '../wordsCountController.js';
 import { initCreateWordController } from './createWordController.js';
 import { initRenderWords } from './renderWordsController.js';
 
@@ -42,6 +43,7 @@ export function initWordController() {
       await initRenderWords();
       initCreateWordController();
       initWordController();
+      wordCountController();
     });
 
     btnEdit.addEventListener('click', async () => {

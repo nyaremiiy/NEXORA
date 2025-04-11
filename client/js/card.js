@@ -9,6 +9,7 @@ import './ui/avatarController.js';
 
 import { initWordController } from './ui/words/wordController.js';
 import { wordCountController } from './ui/wordsCountController.js';
+import { setToTitleCardPage } from './utils/cardTitleName.js';
 
 checkAuth('/card');
 console.log(JSON.parse(localStorage.getItem('currentCard')));
@@ -21,4 +22,5 @@ await initRenderWords();
 initCreateWordController();
 initWordController();
 
+setToTitleCardPage();
 wordCountController();

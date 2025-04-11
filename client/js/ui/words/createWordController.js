@@ -5,6 +5,7 @@ import {
 } from '../../constants/dom/card/cardDomElements.js';
 import { BTNS_MODAL_CLOSE } from '../../constants/dom/modal/modalDomElements.js';
 import { addWord } from '../../features/words/wordsService.js';
+import { wordCountController } from '../wordsCountController.js';
 import { initRenderWords } from './renderWordsController.js';
 import { initWordController } from './wordController.js';
 
@@ -37,6 +38,7 @@ FORM_CREATE_WORD.addEventListener('submit', async (e) => {
     await addWord(cardId, word, wordTranslate.trim());
     await initRenderWords();
     initWordController();
+    wordCountController();
   } catch (error) {
     console.log(error);
   }
