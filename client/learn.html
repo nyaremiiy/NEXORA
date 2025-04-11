@@ -63,39 +63,62 @@
           <h2 class="learn__title">Вправи</h2>
           <ul class="tasks-list">
             <li class="tasks-list__item is-active" data-type="1">Мікс вправ</li>
-            <li class="tasks-list__item" data-type="2">Вибір правильного перекладу</li>
-            <li class="tasks-list__item" data-type="3">Скласти слово з літер</li>
+            <li class="tasks-list__item" data-type="2">
+              Вибір правильного перекладу
+            </li>
+            <li class="tasks-list__item" data-type="3">
+              Скласти слово з літер
+            </li>
             <li class="tasks-list__item" data-type="4">Переклад англ → укр</li>
             <li class="tasks-list__item" data-type="5">Переклад укр → англ</li>
           </ul>
         </div>
         <div class="learn__content">
-          <div class="task">
-            
-          </div>
+          <div class="task"></div>
         </div>
         <sidebar class="learn__sidebar">
           <h2 class="learn__title">Рейтинг</h2>
-          <ul class="words-list">слова</ul>
+          <ul class="words-list">
+            слова
+          </ul>
         </sidebar>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer__container container">
-        <div class="footer__logo">
-          <div class="logo">
-            ne<span class="logo__accent-letter">x</span>ora
+    <footer class="footer" id="footer">
+      <div class="footer__top-bar">
+        <div class="footer__container container">
+          <div class="footer__logo">
+            <div class="logo logo--light">
+              ne<span class="logo__accent-letter">x</span>ora
+            </div>
+          </div>
+          <div class="footer__content">
+            <div class="footer__contacts">
+              <h5 class="footer__title">Контакти</h5>
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="tel:+380989927765"
+                    >+380989927765</a
+                  >
+                </li>
+                <li class="footer__list-item">
+                  <a
+                    class="footer__list-link"
+                    href="mailto:nazar.yaremiiy@gmail.com"
+                    >nazar.yaremiiy@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <p class="footer__copy">
-          © 2025 Nexora. Made with 🧠 by Nazar Yaremii.
-        </p>
-        <div class="footer__contacts">
-          <a href="tel:+380989927765" class="footer__phone">+380989927765</a>
-          <a href="mailto:nazar.yaremiiy@gmail.com" class="footer__mail"
-            >nazar.yaremiiy@gmail.com</a
-          >
+      </div>
+      <div class="footer__bottom-bar">
+        <div class="footer__container container">
+          <p class="footer__copy">
+            © 2025 Nexora. Made with 🧠 by Nazar Yaremii.
+          </p>
           <ul class="footer__social-list">
             <li class="footer__social-list-item">
               <a href="#" class="footer__social-list__link">
@@ -181,7 +204,7 @@
         </div>
       </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./js/learn.js"></script>
   </body>
