@@ -95,7 +95,20 @@
       gap: 12px;
 
       .label {
+        position: relative;
         width: 100%;
+
+        .pass-config {
+          transform: translateY(-50%);
+          position: absolute;
+          right: 16px;
+          top: 50%;
+
+          svg {
+            height: 20px;
+            width: 20px;
+          }
+        }
 
         &.label--translate {
           transition: all 0.3s ease;
@@ -188,3 +201,4 @@
     }
   }
 }
+

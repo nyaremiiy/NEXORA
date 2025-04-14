@@ -6,3 +6,4 @@ export const CLASS_BURGER_ACTIVE = 'burger--active';
 export const CLASS_BURGER_CLOSING = 'burger--closing';
 export const CLASS_MOBILE_MENU_ACTIVE = 'mobile-menu--active';
 export const CLASS_IS_DISABLED = 'is-disabled';
+export const PASS_CONFIG_ELEMENTS = document.querySelectorAll('.pass-config');

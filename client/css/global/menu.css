@@ -9,10 +9,28 @@
       flex-direction: row;
     }
     .menu__item {
+      &.menu__item--bold {
+        a {
+          font-weight: 600;
+        }
+      }
+
       .menu__link {
         position: relative;
         font-weight: 500;
         font-size: 18px;
+        align-items: center;
+        display: flex;
+        gap: 8px;
+  
+        svg {
+          height: 20px;
+          width: 20px;
+  
+          path {
+            stroke: var(--color-accent);
+          }
+        }
 
         &::before {
           background: var(--color-accent);
