@@ -14,9 +14,9 @@ TASKS.forEach((item) => {
 
 export function checkTask(data = 1) {
   switch (data) {
-    case 1:
-      renderTask1();
-      break;
+    // case 1:
+    //   renderTask1();
+    //   break;
     case 2:
       chooseTask(
         'Вибір правильного перекладу',
@@ -46,6 +46,10 @@ export function checkTask(data = 1) {
       );
       break;
     default:
-      renderTask1();
+      chooseTask(
+        'Вибір правильного перекладу',
+        'Вам буде показано англійське слово та кілька варіантів перекладу. Оберіть правильний варіант перекладу. Відповідь перевіряється одразу, а прогрес слова оновлюється автоматично після завершення усіх завдань.',
+        2
+      )
   }
 }
